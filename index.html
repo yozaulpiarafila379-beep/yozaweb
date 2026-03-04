@@ -1,228 +1,155 @@
+<!--
+Nama  : Yoza Ulpia Rafila
+NIM   : 251410004
+Kelas : SI2A
+-->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OOP - Matrix Theme</title>
+<title>OOP Dart - Penjelasan & Quiz</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family: Consolas, monospace;
+body {
+    font-family: monospace;
     background:black;
     color:#00ff88;
-    overflow-x:hidden;
+    padding:30px;
 }
-
-/* MATRIX CANVAS */
-#matrixCanvas{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-2;
-}
-
-/* RAIN EFFECT */
-.rain{
-    position:fixed;
-    width:2px;
-    height:20px;
-    background:rgba(0,255,136,0.6);
-    animation:fall linear infinite;
-    z-index:-1;
-}
-
-@keyframes fall{
-    from{ transform:translateY(-100px); }
-    to{ transform:translateY(100vh); }
-}
-
-.container{
-    padding:40px;
-}
-
-.identitas{
-    border:1px solid #00ff88;
-    padding:20px;
-    margin-bottom:30px;
-    background:rgba(0,0,0,0.7);
-    box-shadow:0 0 15px #00ff88;
-}
-
-h1{
+h1 {
     text-align:center;
-    margin-bottom:30px;
+    text-shadow:0 0 15px #00ff88;
+}
+.section {
+    margin-bottom:35px;
+    border:1px solid #00ff88;
+    padding:22px;
+    box-shadow:0 0 12px #00ff88;
+}
+h2 {
     text-shadow:0 0 10px #00ff88;
 }
-
-.dart-section{
-    margin-bottom:40px;
-    padding:20px;
+.code {
+    background:rgba(0,0,0,0.85);
     border:1px solid #00ff88;
-    background:rgba(0,0,0,0.8);
-    box-shadow:0 0 15px #00ff88;
-}
-
-pre{
-    background:black;
-    padding:15px;
+    padding:12px;
+    margin-top:10px;
     overflow-x:auto;
-    color:#00ff88;
-    border:1px solid #00ff88;
 }
-
-iframe{
+iframe {
     width:100%;
-    height:500px;
+    height:400px;
+    border:1px solid #00ff88;
+    box-shadow:0 0 10px #00ff88;
     margin-top:15px;
-    border:1px solid #00ff88;
-}
-
-.kesimpulan{
-    margin-top:40px;
-    padding:25px;
-    border:2px solid #00ff88;
-    background:rgba(0,0,0,0.9);
-    box-shadow:0 0 20px #00ff88;
-}
-
-.kesimpulan h2{
-    text-align:center;
-    margin-bottom:20px;
-    text-shadow:0 0 10px #00ff88;
-}
-
-.pengertian{
-    margin-bottom:40px;
-    padding:20px;
-    border:1px solid #00ff88;
-    background:rgba(0,0,0,0.8);
-    box-shadow:0 0 15px #00ff88;
 }
 </style>
 </head>
-
 <body>
 
-<canvas id="matrixCanvas"></canvas>
+<h1>PEMBAHASAN OOP (Object Oriented Programming)</h1>
 
-<div class="container">
-
-<div class="identitas">
+<div class="section">
+    <h2>1. Data Diri</h2>
     <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
     <p><strong>NIM:</strong> 251410004</p>
+    <p><strong>Kelas:</strong> SI2A</p>
 </div>
 
-<h1>OBJECT ORIENTED PROGRAMMING</h1>
-
-<!-- Pengertian OOP -->
-<div class="pengertian">
-    <h2>PENGERTIAN OOP</h2>
-    <p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek sebagai unit utama. Setiap objek memiliki state (data) dan behavior (perilaku). Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dalam sistem yang kompleks.</p>
+<div class="section">
+    <h2>2. Apa Itu OOP?</h2>
+    <p>Object Oriented Programming adalah gaya pemrograman yang menggunakan konsep <strong>class</strong> dan <strong>object</strong> untuk menyusun logika program.  
+       Dengan OOP, kode jadi lebih teratur, modular, dan mudah dipelihara.</p>
 </div>
 
-<div class="dart-section">
-    <h2>CLASS DAN OBJECT</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=8f3627510d64b42cab35e6cd91949b40"></iframe>
+<div class="section">
+    <h2>3. Konsep OOP yang Sering Dipakai</h2>
+    <ul>
+        <li><strong>Class</strong> — Cetakan objek</li>
+        <li><strong>Object</strong> — Instance class</li>
+        <li><strong>Method</strong> — Aksi dalam class</li>
+        <li><strong>Attribute</strong> — Data milik object</li>
+    </ul>
 </div>
 
-<div class="dart-section">
-    <h2>CONSTRUCTOR</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=ab55d3390bcc10e7da6e19bb7dd6b37c"></iframe>
-</div>
+<div class="section">
+    <h2>4. Contoh Program Class & Object</h2>
+    <div class="code">
+// Dart — class kendaraan
+class Vehicle {
+  String brand;
+  int year;
 
-<div class="dart-section">
-    <h2>VALIDASI DATA</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=3947e3d1fdf39788ba11363312a67a93"></iframe>
-</div>
+  Vehicle(this.brand, this.year);
 
-<div class="dart-section">
-    <h2>ENCAPSULATION</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=7bc3487bd4fceb57464bf1f25d092a8e"></iframe>
-</div>
-
-<div class="dart-section">
-    <h2>CONTOH KODE 5</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=c59169f43ea6300d62fa22c8a79cee07"></iframe>
-</div>
-
-<div class="dart-section">
-    <h2>CONTOH KODE 6</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=b46d62a6f572c3e8b0da7fbe46d7c12d"></iframe>
-</div>
-
-<div class="dart-section">
-    <h2>CLASS MAHASISWA (YOZA ULPIA RAFILA)</h2>
-    <iframe src="https://dartpad.dev/100486b88c43b13fde87ed103144c740"></iframe>
-</div>
-
-<!-- Kesimpulan -->
-<div class="kesimpulan">
-    <h2>KESIMPULAN</h2>
-    <p>Dari berbagai contoh kode yang telah ditampilkan, dapat disimpulkan bahwa Object Oriented Programming (OOP) memudahkan pengelolaan kode dengan mengelompokkan data dan perilaku ke dalam kelas. Setiap kelas dapat memiliki atribut untuk menyimpan data dan method untuk menjalankan aksi.</p>
-    <p>Konsep seperti konstruktor membantu dalam membuat objek dengan cara yang lebih fleksibel, sedangkan properti tersembunyi (enkapsulasi) membantu dalam melindungi data agar tidak diakses secara sembarangan. Contoh kelas Mahasiswa dengan data diri Yoza Ulpia Rafila juga menunjukkan bagaimana OOP dapat diterapkan untuk merepresentasikan entitas nyata dengan jelas. Dengan menerapkan OOP, kode yang dibuat akan menjadi lebih terstruktur, mudah diperbaiki, dan dapat digunakan kembali untuk kebutuhan yang berbeda.</p>
-</div>
-
-</div>
-
-<script>
-// MATRIX EFFECT
-const canvas = document.getElementById("matrixCanvas");
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-const letters = "01";
-const fontSize = 16;
-const columns = canvas.width / fontSize;
-
-const drops = [];
-for(let x = 0; x < columns; x++){
-    drops[x] = 1;
+  void info() {
+    print("Vehicle: $brand, Year: $year");
+  }
 }
 
-function draw(){
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
-
-    for(let i = 0; i < drops.length; i++){
-        const text = letters.charAt(Math.floor(Math.random()*letters.length));
-        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-
-        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
-            drops[i] = 0;
-        }
-        drops[i]++;
-    }
+void main() {
+  var car = Vehicle("Toyota", 2020);
+  car.info();
 }
-setInterval(draw, 35);
+    </div>
 
-// RAIN DROPS
-function createRain(){
-    const rain = document.createElement("div");
-    rain.classList.add("rain");
-    rain.style.left = Math.random()*window.innerWidth + "px";
-    rain.style.animationDuration = (Math.random()*1 + 0.5) + "s";
-    rain.style.opacity = Math.random();
-    document.body.appendChild(rain);
+    <p>Kamu juga bisa lihat contoh ini di DartPad:</p>
+    <iframe src="https://dartpad.dev/embed-inline.html?id=ac873495f9e555e5e85df6db1a4e6e87"></iframe>
+</div>
 
-    setTimeout(()=>{
-        rain.remove();
-    },1500);
+<div class="section">
+    <h2>5. Inheritance (Pewarisan)</h2>
+    <p>Inheritance membuat class baru dapat mewarisi sifat (properties & methods) dari class lain.</p>
+    <div class="code">
+class Animal {
+  void eat() {
+    print("Eating");
+  }
 }
-setInterval(createRain,50);
-</script>
+
+class Cat extends Animal {
+  void sound() {
+    print("Meow");
+  }
+}
+
+void main() {
+  Cat kitty = Cat();
+  kitty.eat();
+  kitty.sound();
+}
+    </div>
+</div>
+
+<div class="section">
+    <h2>6. Bonus Quiz</h2>
+    <p>Pilih jawaban yang paling tepat:</p>
+
+    <p><strong>1. Dalam OOP, objek adalah...</strong></p>
+    <p>A. Tipe data primitif<br>
+       B. Hasil nyata dari class<br>
+       C. Sebuah library<br>
+       D. Kode prosedural</p>
+
+    <p><strong>2. Apa itu method?</strong></p>
+    <p>A. Data pada class<br>
+       B. Variabel global<br>
+       C. Fungsi di dalam class<br>
+       D. Loop</p>
+
+    <div class="code">
+Jawaban:  
+1. B  
+2. C
+    </div>
+</div>
+
+<div class="section">
+    <h2>7. Kesimpulan</h2>
+    <p>OOP membantu membuat struktur program lebih rapi dan memudahkan pengembangan kode, terutama untuk program berskala besar.</p>
+</div>
 
 </body>
 </html>
