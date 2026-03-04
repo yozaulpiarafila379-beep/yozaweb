@@ -3,225 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OOP - Matrix Theme</title>
+<title>OOP - Yoza Ulpia Rafila</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
 }
 
 body{
-    font-family: Consolas, monospace;
-    background:black;
-    color:#00ff88;
-    overflow-x:hidden;
+    background-color: #0a0a0a;
+    color: #00ff88;
+    line-height: 1.6;
+    padding: 2rem;
 }
 
-/* MATRIX CANVAS */
-#matrixCanvas{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-2;
-}
-
-/* RAIN EFFECT */
-.rain{
-    position:fixed;
-    width:2px;
-    height:20px;
-    background:rgba(0,255,136,0.6);
-    animation:fall linear infinite;
-    z-index:-1;
-}
-
-@keyframes fall{
-    from{ transform:translateY(-100px); }
-    to{ transform:translateY(100vh); }
-}
-
-.container{
-    padding:40px;
-}
-
-.identitas{
-    border:1px solid #00ff88;
-    padding:20px;
-    margin-bottom:30px;
-    background:rgba(0,0,0,0.7);
-    box-shadow:0 0 15px #00ff88;
+header{
+    border: 2px solid #00ff88;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px #00ff88;
 }
 
 h1{
-    text-align:center;
-    margin-bottom:30px;
-    text-shadow:0 0 10px #00ff88;
+    text-shadow: 0 0 5px #00ff88;
+    margin-bottom: 0.5rem;
 }
 
-.dart-section{
-    margin-bottom:40px;
-    padding:20px;
-    border:1px solid #00ff88;
-    background:rgba(0,0,0,0.8);
-    box-shadow:0 0 15px #00ff88;
+section{
+    margin-bottom: 3rem;
+    border: 1px solid #00ff88;
+    padding: 1.5rem;
+    box-shadow: 0 0 8px #00ff88;
+}
+
+h2{
+    color: #00ff88;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #00ff88;
+    padding-bottom: 0.5rem;
 }
 
 pre{
-    background:black;
-    padding:15px;
-    overflow-x:auto;
-    color:#00ff88;
-    border:1px solid #00ff88;
+    background-color: #000;
+    border: 1px solid #00ff88;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
 }
 
-iframe{
-    width:100%;
-    height:500px;
-    margin-top:15px;
-    border:1px solid #00ff88;
+.code-block{
+    margin: 1.5rem 0;
 }
 
-.kesimpulan{
-    margin-top:40px;
-    padding:25px;
-    border:2px solid #00ff88;
-    background:rgba(0,0,0,0.9);
-    box-shadow:0 0 20px #00ff88;
+.run-btn{
+    background-color: #00ff88;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.kesimpulan h2{
-    text-align:center;
-    margin-bottom:20px;
-    text-shadow:0 0 10px #00ff88;
+.run-btn:hover{
+    box-shadow: 0 0 5px #00ff88;
 }
 
-.pengertian{
-    margin-bottom:40px;
-    padding:20px;
-    border:1px solid #00ff88;
-    background:rgba(0,0,0,0.8);
-    box-shadow:0 0 15px #00ff88;
+ul{
+    list-style-type: square;
+    margin-left: 2rem;
+}
+
+.identitas{
+    text-align: center;
+    font-size: 1.1rem;
 }
 </style>
 </head>
 
 <body>
+<header>
+    <div class="identitas">
+        <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
+        <p><strong>NIM:</strong> 251410004</p>
+    </div>
+    <h1>OBJECT ORIENTED PROGRAMMING (OOP) DALAM DART</h1>
+</header>
 
-<canvas id="matrixCanvas"></canvas>
+<!-- 01 PENGERTIAN OOP -->
+<section>
+    <h2>01 PENGERTIAN OOP</h2>
+    <p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek sebagai unit utama. Setiap objek memiliki state (data) dan behavior (perilaku). Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dalam arsitektur sistem yang kompleks.</p>
+</section>
 
-<div class="container">
+<!-- 02 KONSEP DASAR -->
+<section>
+    <h2>02 KONSEP DASAR</h2>
+    <ul>
+        <li><strong>Class</strong>: Blueprint atau cetakan protokol untuk membuat objek.</li>
+        <li><strong>Object</strong>: Manifestasi runtime atau instance nyata dari sebuah class.</li>
+        <li><strong>Attribute</strong>: Representasi data melalui variabel di dalam class.</li>
+        <li><strong>Method</strong>: Logika fungsional atau fungsi di dalam class.</li>
+    </ul>
+    <p>Empat pilar utama ini membentuk struktur dasar dalam pengembangan aplikasi berbasis objek di Dart, memungkinkan pengembang untuk memodelkan entitas dunia nyata ke dalam kode digital.</p>
+</section>
 
-<div class="identitas">
-    <p><strong>Nama:</strong> Herly Afrizal</p>
-    <p><strong>NIM:</strong> 251410002</p>
-</div>
+<!-- 03 CONTOH CLASS SEDERHANA (CAR) -->
+<section>
+    <h2>03 CONTOH CLASS SEDERHANA (CAR)</h2>
+    <p>Di bawah ini adalah contoh pendefinisian class <code>Car</code>. Class ini memiliki dua attribute (model dan color) serta dua method (start dan stop) yang merepresentasikan perilaku dasar sebuah mobil.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Car {
+  String? model;
+  String? color;
 
-<h1>OBJECT ORIENTED PROGRAMMING</h1>
+  void start() {
+    print('Car started!');
+  }
 
-<!-- Pengertian OOP -->
-<div class="pengertian">
-    <h2>PENGERTIAN OOP</h2>
-    <p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berorientasi pada objek, di mana setiap objek memiliki atribut (data) dan method (perilaku). Paradigma ini bertujuan untuk membuat kode lebih terstruktur, dapat digunakan kembali, mudah dipelihara, dan lebih fleksibel dalam pengembangan sistem yang kompleks.</p>
-</div>
+  void stop() {
+    print('Car stopped!');
+  }
+}</pre>
+    </div>
+</section>
 
-<div class="dart-section">
-    <h2>CLASS DAN OBJECT (MOBIL)</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=8f3627510d64b42cab35e6cd91949b40"></iframe>
-</div>
+<!-- 04 OBJECT INSTANTIATION -->
+<section>
+    <h2>04 OBJECT INSTANTIATION</h2>
+    <p>Setelah class didefinisikan, kita dapat membuat Object atau instance dari class tersebut di dalam fungsi <code>main()</code>. Proses ini disebut instansiasi, di mana objek dialokasikan ke dalam memori.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>void main() {
+  Car myCar = Car();
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
 
-<div class="dart-section">
-    <h2>ATRIBUT CLASS</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=ab55d3390bcc10e7da6e19bb7dd6b37c"></iframe>
-</div>
+  myCar.start();
+  myCar.stop();
+}</pre>
+    </div>
+</section>
 
-<div class="dart-section">
-    <h2>CONSTRUCTOR (INISIALISASI DATA)</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=3947e3d1fdf39788ba11363312a67a93"></iframe>
-</div>
+<!-- 05 CONSTRUCTORS -->
+<section>
+    <h2>05 CONSTRUCTORS</h2>
+    <p>Constructor adalah metode inisialisasi yang dipanggil secara otomatis saat objek baru diciptakan dalam memori sistem. Di Dart, kita bisa menggunakan formal parameters (<code>this.attribute</code>) untuk menyederhanakan proses pengisian nilai attribute.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Car {
+  String model;
+  String color;
 
-<div class="dart-section">
-    <h2>CLASS MAHASISWA (HERLY AFRIZAL)</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=7bc3487bd4fceb57464bf1f25d092a8e"></iframe>
-</div>
+  Car(this.model, this.color);
 
-<div class="dart-section">
-    <h2>ENCAPSULATION (PROPERTI PRIVATE)</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=c59169f43ea6300d62fa22c8a79cee07"></iframe>
-</div>
+  void start() {
+    print('Engine Online: $model');
+  }
+}</pre>
+    </div>
+</section>
 
-<div class="dart-section">
-    <h2>CONSTRUCTOR SEDERHANA (PRODUK)</h2>
-    <iframe src="https://dartpad.dev/embed-inline.html?id=b46d62a6f572c3e8b0da7fbe46d7c12d"></iframe>
-</div>
+<!-- 06 PRACTICE: MAHASISWA CLASS -->
+<section>
+    <h2>06 PRACTICE: MAHASISWA CLASS</h2>
+    <p>Latihan dalam membuat class <code>Mahasiswa</code> yang menampung data akademik. Class ini mengimplementasikan constructor untuk memastikan setiap objek mahasiswa memiliki data yang lengkap saat dibuat.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Mahasiswa {
+  String nama;
+  String nim;
+  double ipk;
 
-<div class="dart-section">
-    <h2>CLASS MAHASISWA (YOZA ULPIA RAFILA)</h2>
-    <iframe src="https://dartpad.dev/100486b88c43b13fde87ed103144c740"></iframe>
-</div>
+  Mahasiswa(this.nama, this.nim, this.ipk);
 
-<!-- Kesimpulan -->
-<div class="kesimpulan">
-    <h2>KESIMPULAN</h2>
-    <p>OOP merupakan paradigma yang efektif untuk mengorganisir kode dengan mengelompokkan data dan aksi ke dalam kelas. Kelas berperan sebagai cetakan untuk membuat objek, yang dapat memiliki atribut untuk menyimpan informasi dan method untuk menjalankan tindakan tertentu.</p>
-    <p>Konstruktor memudahkan pembuatan objek dengan menginisialisasi data secara langsung, sedangkan enkapsulasi (melalui properti private dan metode getter/setter) melindungi integritas data. Contoh implementasi pada kelas <em>Car</em>, <em>Product</em>, dan <em>Mahasiswa</em> menunjukkan bagaimana OOP dapat merepresentasikan entitas nyata dengan jelas dan terstruktur, sehingga membuat kode lebih mudah dipelihara dan digunakan kembali.</p>
-</div>
+  void tampilkanData() {
+    print('NAMA : $nama | NIM : $nim | IPK : $ipk');
+  }
+}
 
-</div>
+void main() {
+  Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.9);
+  mhs1.tampilkanData();
+}</pre>
+    </div>
+</section>
+
+<!-- 07 ENCAPSULATION -->
+<section>
+    <h2>07 ENCAPSULATION</h2>
+    <p>Encapsulation adalah teknik untuk menyembunyikan detail implementasi internal. Di Dart, kita menggunakan awalan underscore (<code>_</code>) untuk membuat attribute bersifat private, sehingga hanya bisa diakses melalui getter dan setter.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Person {
+  String _name;
+  int age;
+
+  Person(this._name, this.age);
+
+  void setName(String name) => _name = name;
+  String getName() => _name;
+}</pre>
+    </div>
+</section>
+
+<!-- 08 THIS KEYWORD -->
+<section>
+    <h2>08 THIS KEYWORD</h2>
+    <p>Kata kunci <code>this</code> digunakan untuk merujuk pada instance saat ini dari sebuah class. Ini sangat berguna untuk menghindari ambiguitas ketika nama parameter pada constructor sama dengan nama attribute di dalam class.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Product {
+  String nama;
+  Product(this.nama);
+}</pre>
+    </div>
+</section>
+
+<!-- 09 PRACTICE 2: PRODUK CLASS -->
+<section>
+    <h2>09 PRACTICE 2: PRODUK CLASS</h2>
+    <p>Latihan lanjutan menggunakan Named Parameters dan operator <code>required</code>. Teknik ini membuat pembuatan objek menjadi lebih deskriptif dan aman karena compiler akan memberikan peringatan jika data wajib tidak diisi.</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Produk {
+  final String id, nama;
+  final double harga;
+  final int stok;
+  final String kategori;
+
+  Produk({
+    required this.id,
+    required this.nama,
+    required this.harga,
+    this.stok = 0,
+    this.kategori = 'Umum',
+  });
+}</pre>
+    </div>
+</section>
+
+<!-- 10 KESIMPULAN -->
+<section>
+    <h2>10 KESIMPULAN</h2>
+    <ul>
+        <li>OOP mempermudah pengelolaan kode melalui enkapsulasi logika dalam Object.</li>
+        <li>Constructor digunakan untuk inisialisasi data primer secara otomatis.</li>
+        <li>Encapsulation menjaga keamanan data dari akses runtime ilegal.</li>
+        <li>Dart mendukung OOP secara native, menjadi fondasi utama framework Flutter.</li>
+    </ul>
+</section>
+
+<!-- 11 QUIZ BONUS: HEWAN CLASS -->
+<section>
+    <h2>11 QUIZ BONUS: HEWAN CLASS</h2>
+    <p>Implementasi kelas <code>Hewan</code> dengan pendefinisian atribut dan metode dasar:</p>
+    
+    <div class="code-block">
+        <button class="run-btn">RUN CODE</button>
+        <pre>class Hewan {
+  String nama;
+
+  Hewan(this.nama);
+
+  void bersuara() {
+    print('$nama sedang bersuara...');
+    print('Sound Protocol: [DATA_SOUND_GENERATED]');
+  }
+}
+
+void main() {
+  var myPet = Hewan('Anjing');
+  print('Nama Hewan: ${myPet.nama}');
+  myPet.bersuara();
+}</pre>
+    </div>
+</section>
 
 <script>
-// MATRIX EFFECT
-const canvas = document.getElementById("matrixCanvas");
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-const letters = "01";
-const fontSize = 16;
-const columns = canvas.width / fontSize;
-
-const drops = [];
-for(let x = 0; x < columns; x++){
-    drops[x] = 1;
-}
-
-function draw(){
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
-
-    for(let i = 0; i < drops.length; i++){
-        const text = letters.charAt(Math.floor(Math.random()*letters.length));
-        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-
-        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
-            drops[i] = 0;
-        }
-        drops[i]++;
-    }
-}
-setInterval(draw, 35);
-
-// RAIN DROPS
-function createRain(){
-    const rain = document.createElement("div");
-    rain.classList.add("rain");
-    rain.style.left = Math.random()*window.innerWidth + "px";
-    rain.style.animationDuration = (Math.random()*1 + 0.5) + "s";
-    rain.style.opacity = Math.random();
-    document.body.appendChild(rain);
-
-    setTimeout(()=>{
-        rain.remove();
-    },1500);
-}
-setInterval(createRain,50);
+// Fungsi untuk simulasi tombol RUN CODE
+document.querySelectorAll('.run-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        alert('Kode berhasil dijalankan! Silakan cek output di konsol Dart atau salin kode ke DartPad untuk melihat hasilnya.');
+    });
+});
 </script>
 
 </body>
