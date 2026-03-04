@@ -1,15 +1,9 @@
-<!--
-Nama  : Yoza Ulpia Rafila
-NIM   : 251410004
-Kelas : SI2A
--->
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OOP Dart - Matrix Theme</title>
+<title>OOP - Matrix Theme</title>
 
 <style>
 *{
@@ -25,7 +19,7 @@ body{
     overflow-x:hidden;
 }
 
-/* MATRIX BACKGROUND */
+/* MATRIX CANVAS */
 #matrixCanvas{
     position:fixed;
     top:0;
@@ -35,46 +29,81 @@ body{
     z-index:-2;
 }
 
+/* RAIN EFFECT */
+.rain{
+    position:fixed;
+    width:2px;
+    height:20px;
+    background:rgba(0,255,136,0.6);
+    animation:fall linear infinite;
+    z-index:-1;
+}
+
+@keyframes fall{
+    from{ transform:translateY(-100px); }
+    to{ transform:translateY(100vh); }
+}
+
 .container{
     padding:40px;
 }
 
-.section{
-    margin-bottom:40px;
-    padding:25px;
+.identitas{
     border:1px solid #00ff88;
-    background:rgba(0,0,0,0.85);
-    box-shadow:0 0 20px #00ff88;
+    padding:20px;
+    margin-bottom:30px;
+    background:rgba(0,0,0,0.7);
+    box-shadow:0 0 15px #00ff88;
 }
 
 h1{
     text-align:center;
     margin-bottom:30px;
-    text-shadow:0 0 15px #00ff88;
-}
-
-h2{
-    margin-bottom:15px;
     text-shadow:0 0 10px #00ff88;
 }
 
-ul{
-    margin-left:20px;
+.dart-section{
+    margin-bottom:40px;
+    padding:20px;
+    border:1px solid #00ff88;
+    background:rgba(0,0,0,0.8);
+    box-shadow:0 0 15px #00ff88;
 }
 
-.code{
+pre{
     background:black;
     padding:15px;
-    border:1px solid #00ff88;
-    margin-top:15px;
     overflow-x:auto;
+    color:#00ff88;
+    border:1px solid #00ff88;
 }
 
 iframe{
     width:100%;
-    height:450px;
+    height:500px;
     margin-top:15px;
     border:1px solid #00ff88;
+}
+
+.kesimpulan{
+    margin-top:40px;
+    padding:25px;
+    border:2px solid #00ff88;
+    background:rgba(0,0,0,0.9);
+    box-shadow:0 0 20px #00ff88;
+}
+
+.kesimpulan h2{
+    text-align:center;
+    margin-bottom:20px;
+    text-shadow:0 0 10px #00ff88;
+}
+
+.pengertian{
+    margin-bottom:40px;
+    padding:20px;
+    border:1px solid #00ff88;
+    background:rgba(0,0,0,0.8);
     box-shadow:0 0 15px #00ff88;
 }
 </style>
@@ -86,75 +115,59 @@ iframe{
 
 <div class="container">
 
-<h1>OBJECT ORIENTED PROGRAMMING (OOP)</h1>
-
-<div class="section">
-    <h2>1. Identitas</h2>
-    <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
-    <p><strong>NIM:</strong> 251410004</p>
-    <p><strong>Kelas:</strong> SI2A</p>
+<div class="identitas">
+    <p><strong>Nama:</strong> Herly Afrizal</p>
+    <p><strong>NIM:</strong> 251410002</p>
 </div>
 
-<div class="section">
-    <h2>2. Pengertian OOP</h2>
-    <p>
-        Object Oriented Programming adalah metode pemrograman yang menggunakan konsep 
-        class dan object untuk menyusun program agar lebih terstruktur, modular, dan mudah dikembangkan.
-    </p>
+<h1>OBJECT ORIENTED PROGRAMMING</h1>
+
+<!-- Pengertian OOP -->
+<div class="pengertian">
+    <h2>PENGERTIAN OOP</h2>
+    <p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berorientasi pada objek, di mana setiap objek memiliki atribut (data) dan method (perilaku). Paradigma ini bertujuan untuk membuat kode lebih terstruktur, dapat digunakan kembali, mudah dipelihara, dan lebih fleksibel dalam pengembangan sistem yang kompleks.</p>
 </div>
 
-<div class="section">
-    <h2>3. Konsep Dasar OOP</h2>
-    <ul>
-        <li>Class – Cetakan untuk membuat object</li>
-        <li>Object – Instance dari class</li>
-        <li>Encapsulation – Menyembunyikan data</li>
-        <li>Inheritance – Pewarisan sifat</li>
-        <li>Polymorphism – Banyak bentuk</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>4. Class dan Object</h2>
+<div class="dart-section">
+    <h2>CLASS DAN OBJECT (MOBIL)</h2>
     <iframe src="https://dartpad.dev/embed-inline.html?id=8f3627510d64b42cab35e6cd91949b40"></iframe>
 </div>
 
-<div class="section">
-    <h2>5. Constructor</h2>
+<div class="dart-section">
+    <h2>ATRIBUT CLASS</h2>
     <iframe src="https://dartpad.dev/embed-inline.html?id=ab55d3390bcc10e7da6e19bb7dd6b37c"></iframe>
 </div>
 
-<div class="section">
-    <h2>6. Validasi Data</h2>
+<div class="dart-section">
+    <h2>CONSTRUCTOR (INISIALISASI DATA)</h2>
     <iframe src="https://dartpad.dev/embed-inline.html?id=3947e3d1fdf39788ba11363312a67a93"></iframe>
 </div>
 
-<div class="section">
-    <h2>7. Encapsulation</h2>
+<div class="dart-section">
+    <h2>CLASS MAHASISWA (HERLY AFRIZAL)</h2>
     <iframe src="https://dartpad.dev/embed-inline.html?id=7bc3487bd4fceb57464bf1f25d092a8e"></iframe>
 </div>
 
-<div class="section">
-    <h2>8. Bonus Quiz</h2>
-    <p><strong>1.</strong> Object adalah...</p>
-    <p>A. Blueprint<br>B. Instance class<br>C. Loop<br>D. Library</p>
-
-    <p><strong>2.</strong> Constructor berfungsi untuk...</p>
-    <p>A. Menghapus object<br>B. Memberi nilai awal<br>C. Perulangan<br>D. Output</p>
-
-    <div class="code">
-Jawaban:
-1. B
-2. B
-    </div>
+<div class="dart-section">
+    <h2>ENCAPSULATION (PROPERTI PRIVATE)</h2>
+    <iframe src="https://dartpad.dev/embed-inline.html?id=c59169f43ea6300d62fa22c8a79cee07"></iframe>
 </div>
 
-<div class="section">
-    <h2>9. Kesimpulan</h2>
-    <p>
-        Dengan OOP, program menjadi lebih rapi, terstruktur, dan mudah dikembangkan.
-        Konsep class dan object membantu pemrogram memahami sistem secara lebih nyata.
-    </p>
+<div class="dart-section">
+    <h2>CONSTRUCTOR SEDERHANA (PRODUK)</h2>
+    <iframe src="https://dartpad.dev/embed-inline.html?id=b46d62a6f572c3e8b0da7fbe46d7c12d"></iframe>
+</div>
+
+<div class="dart-section">
+    <h2>CLASS MAHASISWA (YOZA ULPIA RAFILA)</h2>
+    <iframe src="https://dartpad.dev/100486b88c43b13fde87ed103144c740"></iframe>
+</div>
+
+<!-- Kesimpulan -->
+<div class="kesimpulan">
+    <h2>KESIMPULAN</h2>
+    <p>OOP merupakan paradigma yang efektif untuk mengorganisir kode dengan mengelompokkan data dan aksi ke dalam kelas. Kelas berperan sebagai cetakan untuk membuat objek, yang dapat memiliki atribut untuk menyimpan informasi dan method untuk menjalankan tindakan tertentu.</p>
+    <p>Konstruktor memudahkan pembuatan objek dengan menginisialisasi data secara langsung, sedangkan enkapsulasi (melalui properti private dan metode getter/setter) melindungi integritas data. Contoh implementasi pada kelas <em>Car</em>, <em>Product</em>, dan <em>Mahasiswa</em> menunjukkan bagaimana OOP dapat merepresentasikan entitas nyata dengan jelas dan terstruktur, sehingga membuat kode lebih mudah dipelihara dan digunakan kembali.</p>
 </div>
 
 </div>
@@ -170,15 +183,15 @@ canvas.width = window.innerWidth;
 const letters = "01";
 const fontSize = 16;
 const columns = canvas.width / fontSize;
-const drops = [];
 
+const drops = [];
 for(let x = 0; x < columns; x++){
     drops[x] = 1;
 }
 
 function draw(){
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "#00ff88";
     ctx.font = fontSize + "px monospace";
@@ -193,7 +206,22 @@ function draw(){
         drops[i]++;
     }
 }
-setInterval(draw,35);
+setInterval(draw, 35);
+
+// RAIN DROPS
+function createRain(){
+    const rain = document.createElement("div");
+    rain.classList.add("rain");
+    rain.style.left = Math.random()*window.innerWidth + "px";
+    rain.style.animationDuration = (Math.random()*1 + 0.5) + "s";
+    rain.style.opacity = Math.random();
+    document.body.appendChild(rain);
+
+    setTimeout(()=>{
+        rain.remove();
+    },1500);
+}
+setInterval(createRain,50);
 </script>
 
 </body>
