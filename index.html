@@ -121,7 +121,23 @@ void main() {
 
     <div class="dart-section">
         <h3>Contoh Kode 2: Class Car dengan Menampilkan Properti</h3>
-        
+     <pre>class Car {
+  String model;
+  String color;
+
+  Car(this.model, this.color);
+
+  void start() {
+    print('Engine Online: $model');
+  }
+}
+
+void main() {
+  Car myCar = Car("Sedan", "Merah");
+
+  myCar.start();
+  print(myCar.color);
+}</pre>   
 
         </pre>
         <iframe src="https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8"></iframe>
