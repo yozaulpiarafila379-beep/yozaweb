@@ -237,13 +237,15 @@ class Produk {
   final String id, nama;  
   final double harga;  
   final int stok;  
-  final String kategori;  Produk({
-required this.id,
-required this.nama,
-required this.harga,
-this.stok = 0,
-this.kategori = "Umum",
-});
+  final String kategori;
+
+  Produk({
+    required this.id,
+    required this.nama,
+    required this.harga,
+    this.stok = 0,
+    this.kategori = "Umum",
+  });
 }
 
 void main() {
