@@ -1,125 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OOP - Yoza Ulpia Rafila</title>
-
-<style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Consolas, monospace;
-}
-
-body{
-    background-color: #0a0a0a;
-    color: #00ff88;
-    line-height: 1.6;
-    padding: 2rem;
-}
-
-header{
-    border: 2px solid #00ff88;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    box-shadow: 0 0 10px #00ff88;
-}
-
-h1{
-    text-shadow: 0 0 5px #00ff88;
-    margin-bottom: 0.5rem;
-}
-
-section{
-    margin-bottom: 3rem;
-    border: 1px solid #00ff88;
-    padding: 1.5rem;
-    box-shadow: 0 0 8px #00ff88;
-}
-
-h2{
-    color: #00ff88;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #00ff88;
-    padding-bottom: 0.5rem;
-}
-
-pre{
-    background-color: #000;
-    border: 1px solid #00ff88;
-    padding: 1rem;
-    overflow-x: auto;
-    margin: 1rem 0;
-}
-
-.code-block{
-    margin: 1.5rem 0;
-}
-
-.run-btn{
-    background-color: #00ff88;
-    color: #000;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.run-btn:hover{
-    box-shadow: 0 0 5px #00ff88;
-}
-
-ul{
-    list-style-type: square;
-    margin-left: 2rem;
-}
-
-.identitas{
-    text-align: center;
-    font-size: 1.1rem;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan OOP Dart - Yoza Ulpia Rafila</title>
 </head>
-
 <body>
-<header>
-    <div class="identitas">
-        <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
-        <p><strong>NIM:</strong> 251410004</p>
-    </div>
-    <h1>OBJECT ORIENTED PROGRAMMING (OOP) DALAM DART</h1>
-</header>
 
-<!-- 01 PENGERTIAN OOP -->
-<section>
-    <h2>01 PENGERTIAN OOP</h2>
-    <p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek sebagai unit utama. Setiap objek memiliki state (data) dan behavior (perilaku). Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dalam arsitektur sistem yang kompleks.</p>
-</section>
+<h1>Laporan OOP Dart</h1>
 
-<!-- 02 KONSEP DASAR -->
-<section>
-    <h2>02 KONSEP DASAR</h2>
-    <ul>
-        <li><strong>Class</strong>: Blueprint atau cetakan protokol untuk membuat objek.</li>
-        <li><strong>Object</strong>: Manifestasi runtime atau instance nyata dari sebuah class.</li>
-        <li><strong>Attribute</strong>: Representasi data melalui variabel di dalam class.</li>
-        <li><strong>Method</strong>: Logika fungsional atau fungsi di dalam class.</li>
-    </ul>
-    <p>Empat pilar utama ini membentuk struktur dasar dalam pengembangan aplikasi berbasis objek di Dart, memungkinkan pengembang untuk memodelkan entitas dunia nyata ke dalam kode digital.</p>
-</section>
+<h2>Yoza Ulpia Rafila</h2>
+<h3>NIM : 251410004</h3>
+<h3>KLS : SI2A</h3>
 
-<!-- 03 CONTOH CLASS SEDERHANA (CAR) -->
-<section>
-    <h2>03 CONTOH CLASS SEDERHANA (CAR)</h2>
-    <p>Di bawah ini adalah contoh pendefinisian class <code>Car</code>. Class ini memiliki dua attribute (model dan color) serta dua method (start dan stop) yang merepresentasikan perilaku dasar sebuah mobil.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Car {
+<hr>
+
+<h2>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP) - DART</h2>
+
+<h3>1. Pengertian OOP</h3>
+<p>
+Object Oriented Programming (OOP) adalah paradigma pemrograman yang berorientasi pada objek.
+Objek dibuat dari class yang memiliki atribut dan method.
+</p>
+
+<h3>2. Class dan Object</h3>
+<pre>
+class Car {
   String? model;
   String? color;
 
@@ -130,116 +36,61 @@ ul{
   void stop() {
     print('Car stopped!');
   }
-}</pre>
-    </div>
-</section>
+}
+</pre>
 
-<!-- 04 OBJECT INSTANTIATION -->
-<section>
-    <h2>04 OBJECT INSTANTIATION</h2>
-    <p>Setelah class didefinisikan, kita dapat membuat Object atau instance dari class tersebut di dalam fungsi <code>main()</code>. Proses ini disebut instansiasi, di mana objek dialokasikan ke dalam memori.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>void main() {
-  Car myCar = Car();
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-
-  myCar.start();
-  myCar.stop();
-}</pre>
-    </div>
-</section>
-
-<!-- 05 CONSTRUCTORS -->
-<section>
-    <h2>05 CONSTRUCTORS</h2>
-    <p>Constructor adalah metode inisialisasi yang dipanggil secara otomatis saat objek baru diciptakan dalam memori sistem. Di Dart, kita bisa menggunakan formal parameters (<code>this.attribute</code>) untuk menyederhanakan proses pengisian nilai attribute.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Car {
-  String model;
-  String color;
+<h3>3. Constructor</h3>
+<pre>
+class Car {
+  String? model;
+  String? color;
 
   Car(this.model, this.color);
 
   void start() {
-    print('Engine Online: $model');
+    print('Car started!');
   }
-}</pre>
-    </div>
-</section>
+}
+</pre>
 
-<!-- 06 PRACTICE: MAHASISWA CLASS -->
-<section>
-    <h2>06 PRACTICE: MAHASISWA CLASS</h2>
-    <p>Latihan dalam membuat class <code>Mahasiswa</code> yang menampung data akademik. Class ini mengimplementasikan constructor untuk memastikan setiap objek mahasiswa memiliki data yang lengkap saat dibuat.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Mahasiswa {
+<h3>4. Validasi Data</h3>
+<pre>
+class Mahasiswa {
   String nama;
   String nim;
   double ipk;
 
-  Mahasiswa(this.nama, this.nim, this.ipk);
-
-  void tampilkanData() {
-    print('NAMA : $nama | NIM : $nim | IPK : $ipk');
+  Mahasiswa(this.nama, this.nim, this.ipk) {
+    if (ipk < 0.0 || ipk > 4.0) {
+      throw ArgumentError('IPK harus 0.0 - 4.0');
+    }
   }
 }
+</pre>
 
-void main() {
-  Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.9);
-  mhs1.tampilkanData();
-}</pre>
-    </div>
-</section>
-
-<!-- 07 ENCAPSULATION -->
-<section>
-    <h2>07 ENCAPSULATION</h2>
-    <p>Encapsulation adalah teknik untuk menyembunyikan detail implementasi internal. Di Dart, kita menggunakan awalan underscore (<code>_</code>) untuk membuat attribute bersifat private, sehingga hanya bisa diakses melalui getter dan setter.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Person {
+<h3>5. Encapsulation</h3>
+<pre>
+class Person {
   String _name;
   int age;
 
   Person(this._name, this.age);
 
-  void setName(String name) => _name = name;
-  String getName() => _name;
-}</pre>
-    </div>
-</section>
+  void setName(String name) {
+    _name = name;
+  }
 
-<!-- 08 THIS KEYWORD -->
-<section>
-    <h2>08 THIS KEYWORD</h2>
-    <p>Kata kunci <code>this</code> digunakan untuk merujuk pada instance saat ini dari sebuah class. Ini sangat berguna untuk menghindari ambiguitas ketika nama parameter pada constructor sama dengan nama attribute di dalam class.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Product {
-  String nama;
-  Product(this.nama);
-}</pre>
-    </div>
-</section>
+  String getName() {
+    return _name;
+  }
+}
+</pre>
 
-<!-- 09 PRACTICE 2: PRODUK CLASS -->
-<section>
-    <h2>09 PRACTICE 2: PRODUK CLASS</h2>
-    <p>Latihan lanjutan menggunakan Named Parameters dan operator <code>required</code>. Teknik ini membuat pembuatan objek menjadi lebih deskriptif dan aman karena compiler akan memberikan peringatan jika data wajib tidak diisi.</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Produk {
-  final String id, nama;
+<h3>6. Named Parameter Constructor</h3>
+<pre>
+class Produk {
+  final String id;
+  final String nama;
   final double harga;
   final int stok;
   final String kategori;
@@ -251,55 +102,20 @@ void main() {
     this.stok = 0,
     this.kategori = 'Umum',
   });
-}</pre>
-    </div>
-</section>
-
-<!-- 10 KESIMPULAN -->
-<section>
-    <h2>10 KESIMPULAN</h2>
-    <ul>
-        <li>OOP mempermudah pengelolaan kode melalui enkapsulasi logika dalam Object.</li>
-        <li>Constructor digunakan untuk inisialisasi data primer secara otomatis.</li>
-        <li>Encapsulation menjaga keamanan data dari akses runtime ilegal.</li>
-        <li>Dart mendukung OOP secara native, menjadi fondasi utama framework Flutter.</li>
-    </ul>
-</section>
-
-<!-- 11 QUIZ BONUS: HEWAN CLASS -->
-<section>
-    <h2>11 QUIZ BONUS: HEWAN CLASS</h2>
-    <p>Implementasi kelas <code>Hewan</code> dengan pendefinisian atribut dan metode dasar:</p>
-    
-    <div class="code-block">
-        <button class="run-btn">RUN CODE</button>
-        <pre>class Hewan {
-  String nama;
-
-  Hewan(this.nama);
-
-  void bersuara() {
-    print('$nama sedang bersuara...');
-    print('Sound Protocol: [DATA_SOUND_GENERATED]');
-  }
 }
+</pre>
 
-void main() {
-  var myPet = Hewan('Anjing');
-  print('Nama Hewan: ${myPet.nama}');
-  myPet.bersuara();
-}</pre>
-    </div>
-</section>
+<h3>7. Contoh Program Interaktif (DartPad)</h3>
 
-<script>
-// Fungsi untuk simulasi tombol RUN CODE
-document.querySelectorAll('.run-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert('Kode berhasil dijalankan! Silakan cek output di konsol Dart atau salin kode ke DartPad untuk melihat hasilnya.');
-    });
-});
-</script>
+<iframe 
+  src="https://dartpad.dev/embed-flutter.html?id=100486b88c43b13fde87ed103144c740"
+  width="100%" 
+  height="500px"
+  style="border:1px solid #ccc;">
+</iframe>
+
+<hr>
+<p>© 2026 - Laporan OOP Dart - Yoza Ulpia Rafila</p>
 
 </body>
 </html>
