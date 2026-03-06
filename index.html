@@ -49,25 +49,33 @@
         .run-btn:hover {
             background-color: #0050b3;
         }
-        iframe {
+        .dart-iframe {
+            display: none;
             width: 100%;
             height: 400px;
             border: 2px solid #1890ff;
             border-radius: 4px;
             margin-top: 1rem;
         }
+        .iframe-label {
+            display: none;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #0050b3;
+        }
     </style>
     <script>
-        function openDartPadPopup(url) {
-            const width = 900;
-            const height = 700;
-            const left = (window.screen.width - width) / 2;
-            const top = (window.screen.height - height) / 2;
-            window.open(
-                url,
-                'DartPadKode',
-                `width=${width}, height=${height}, left=${left}, top=${top}, resizable=yes, scrollbars=yes, toolbar=no, menubar=no, location=no, status=yes`
-            );
+        // Fungsi untuk menampilkan iframe sesuai ID
+        function showDartPad(idIframe, idLabel) {
+            // Sembunyikan semua iframe dan label terlebih dahulu
+            const allIframes = document.querySelectorAll('.dart-iframe');
+            const allLabels = document.querySelectorAll('.iframe-label');
+            allIframes.forEach(iframe => iframe.style.display = 'none');
+            allLabels.forEach(label => label.style.display = 'none');
+            
+            // Tampilkan iframe dan label yang dipilih
+            document.getElementById(idIframe).style.display = 'block';
+            document.getElementById(idLabel).style.display = 'block';
         }
     </script>
 </head>
@@ -121,9 +129,9 @@ void main() {
   myCar.stop();
 }
     </pre>
-    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a')">Run Program</button>
-    <p><strong>Hasil Program di DartPad</strong></p>
-    <iframe src="https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a"></iframe>
+    <button class="run-btn" onclick="showDartPad('iframe1', 'label1')">Run Program</button>
+    <p id="label1" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe1" class="dart-iframe" src="https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a"></iframe>
 
 
     <h2>04. Menampilkan Properti Objek (Car)</h2>
@@ -149,9 +157,9 @@ void main() {
   print(myCar.color);
 }
     </pre>
-    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8')">Run Program</button>
-    <p><strong>Hasil Program di DartPad</strong></p>
-    <iframe src="https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8"></iframe>
+    <button class="run-btn" onclick="showDartPad('iframe2', 'label2')">Run Program</button>
+    <p id="label2" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe2" class="dart-iframe" src="https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8"></iframe>
 
 
     <h2>05. Constructor (Mahasiswa)</h2>
@@ -181,9 +189,9 @@ void main() {
   mhs1.tampilkanData();
 }
     </pre>
-    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83')">Run Program</button>
-    <p><strong>Hasil Program di DartPad</strong></p>
-    <iframe src="https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83"></iframe>
+    <button class="run-btn" onclick="showDartPad('iframe3', 'label3')">Run Program</button>
+    <p id="label3" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe3" class="dart-iframe" src="https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83"></iframe>
 
 
     <h2>06. Encapsulation (Person)</h2>
@@ -212,9 +220,9 @@ void main() {
   print(person.getName());
 }
     </pre>
-    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9')">Run Program</button>
-    <p><strong>Hasil Program di DartPad</strong></p>
-    <iframe src="https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9"></iframe>
+    <button class="run-btn" onclick="showDartPad('iframe4', 'label4')">Run Program</button>
+    <p id="label4" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe4" class="dart-iframe" src="https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9"></iframe>
 
 
     <h2>07. This Keyword (Product)</h2>
@@ -235,9 +243,9 @@ void main() {
   print(produk1.nama);
 }
     </pre>
-    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7')">Run Program</button>
-    <p><strong>Hasil Program di DartPad</strong></p>
-    <iframe src="https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7"></iframe>
+    <button class="run-btn" onclick="showDartPad('iframe5', 'label5')">Run Program</button>
+    <p id="label5" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe5" class="dart-iframe" src="https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7"></iframe>
 
 
     <h2>08. Named Parameters (Produk)</h2>
@@ -306,9 +314,9 @@ void main() {
   print(kamera.nama); // Output: Kamera Mirrorless
 }
     </pre>
-    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b')">Run Program</button>
-    <p><strong>Hasil Program di DartPad</strong></p>
-    <iframe src="https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b"></iframe>
+    <button class="run-btn" onclick="showDartPad('iframe6', 'label6')">Run Program</button>
+    <p id="label6" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe6" class="dart-iframe" src="https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b"></iframe>
 
 
     <h2>09. Kesimpulan</h2>
