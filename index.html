@@ -90,6 +90,23 @@
             background-color: #0050b3;
         }
     </style>
+    <script>
+        // Fungsi untuk membuka pop-up DartPad
+        function openDartPadPopup(url) {
+            // Mengatur ukuran dan posisi pop-up
+            const width = 900;
+            const height = 700;
+            const left = (window.screen.width - width) / 2;
+            const top = (window.screen.height - height) / 2;
+            
+            // Membuka jendela pop-up dengan parameter yang ditentukan
+            window.open(
+                url, 
+                'DartPadKode', 
+                `width=${width}, height=${height}, left=${left}, top=${top}, resizable=yes, scrollbars=yes, toolbar=no, menubar=no, location=no, status=yes`
+            );
+        }
+    </script>
 </head>
 <body>
     <div class="identitas">
@@ -127,8 +144,8 @@ myCar.start();
 myCar.stop();
 }
 </pre>
-        <!-- Tombol Run Ditambahkan -->
-        <button class="run-btn" onclick="window.open('https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a', '_blank')">Run Kode 1</button>
+        <!-- Tombol Run dengan Pop-up -->
+        <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a')">Run Kode 1</button>
         <h4>Hasil Program di DartPad</h4>
         <iframe src="https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a"></iframe>
     </div>
@@ -152,8 +169,8 @@ myCar.start();
 print(myCar.color);
 }
 </pre>
-        <!-- Tombol Run Ditambahkan -->
-        <button class="run-btn" onclick="window.open('https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8', '_blank')">Run Kode 2</button>
+        <!-- Tombol Run dengan Pop-up -->
+        <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8')">Run Kode 2</button>
         <h4>Hasil Program di DartPad</h4>
         <iframe src="https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8"></iframe>
     </div>
@@ -179,8 +196,8 @@ Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.85);
 mhs1.tampilkanData();
 }
 </pre>
-        <!-- Tombol Run Ditambahkan -->
-        <button class="run-btn" onclick="window.open('https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83', '_blank')">Run Kode 1</button>
+        <!-- Tombol Run dengan Pop-up -->
+        <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83')">Run Kode 1</button>
         <h4>Hasil Program di DartPad</h4>
         <iframe src="https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83"></iframe>
     </div>
@@ -206,8 +223,8 @@ person.setName("Yoza Ulpia Rafila");
 print(person.getName());
 }
 </pre>
-        <!-- Tombol Run Ditambahkan -->
-        <button class="run-btn" onclick="window.open('https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9', '_blank')">Run Kode 2</button>
+        <!-- Tombol Run dengan Pop-up -->
+        <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9')">Run Kode 2</button>
         <h4>Hasil Program di DartPad</h4>
         <iframe src="https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9"></iframe>
     </div>
@@ -225,8 +242,8 @@ Product produk1 = Product("Laptop Gaming");
 print(produk1.nama);
 }
 </pre>
-        <!-- Tombol Run Ditambahkan -->
-        <button class="run-btn" onclick="window.open('https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7', '_blank')">Run Kode 3</button>
+        <!-- Tombol Run dengan Pop-up -->
+        <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7')">Run Kode 3</button>
         <h4>Hasil Program di DartPad</h4>
         <iframe src="https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7"></iframe>
     </div>
@@ -272,8 +289,8 @@ print(smartphone.nama);
 print(kamera.nama);
 }
 </pre>
-        <!-- Tombol Run Ditambahkan -->
-        <button class="run-btn" onclick="window.open('https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b', '_blank')">Run Kode 4</button>
+        <!-- Tombol Run dengan Pop-up -->
+        <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b')">Run Kode 4</button>
         <h4>Hasil Program di DartPad</h4>
         <iframe src="https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b"></iframe>
     </div>
