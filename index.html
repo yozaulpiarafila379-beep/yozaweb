@@ -1,249 +1,319 @@
-<!DOCTYPE html>  <html lang="id">    <head>    
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-   <title>Website Yoza Ulpia Rafila</title>    
-    <style>    
-        <body>     
-        <h1>Website Yoza Ulpia Rafila</h1>    
-<p>Tugas Praktikum Pemrograman Web</p>    
-        {    
-            font-family: Arial, sans-serif;    
-            line-height: 1.6;    
-            margin: 2rem;    
-            background-color: #e6f7ff; /* Latar belakang biru sangat terang */    
-        }    
-        .identitas {    
-            margin-bottom: 2rem;    
-            padding: 1rem;    
-            border: 2px solid #1890ff; /* Batas biru cerah */    
-            border-radius: 8px;    
-            background-color: #f2f9ff; /* Latar biru muda */    
-            text-align: center;    
-        }    
-        h1 {    
-            color: #0050b3; /* Warna biru tua elegan */    
-            text-align: center;    
-            border-bottom: 3px solid #1890ff;    
-            padding-bottom: 0.5rem;    
-        }    
-        h2 {    
-            color: #1890ff; /* Warna biru cerah */    
-            border-left: 5px solid #1890ff;    
-            padding-left: 0.5rem;    
-        }    
-        h3 {    
-            color: #0050b3; /* Warna biru tua */    
-            background-color: #f2f9ff;    
-            padding: 0.5rem;    
-            border-radius: 4px;    
-        }    
-        .dart-section {    
-            margin: 2rem 0;    
-            padding: 1rem;    
-            border: 1px solid #67c5ff; /* Batas biru muda cerah */    
-            border-radius: 8px;    
-            background-color: #ffffff;    
-            box-shadow: 0 2px 4px rgba(103, 197, 255, 0.1);    
-        }    
-        pre {    
-            background-color: #f8fcff; /* Latar biru paling terang */    
-            padding: 1rem;    
-            border-radius: 4px;    
-            overflow-x: auto;    
-            font-family: Consolas, monospace;    
-            border-left: 4px solid #1890ff;    
-            color: #333;    
-        }    
-        iframe {    
-            width: 100%;    
-            height: 400px;    
-            border: 2px solid #1890ff; /* Batas biru cerah */    
-            border-radius: 4px;    
-            margin-top: 1rem;    
-        }    
-        strong {    
-            color: #0050b3; /* Warna biru tua */    
-        }    
-        .kesimpulan {    
-            margin-top: 3rem;    
-            padding: 1.5rem;    
-            border: 2px solid #0050b3;    
-            border-radius: 8px;    
-            background-color: #f2f9ff;    
-        }    
-        .kesimpulan h2 {    
-            color: #0050b3;    
-            border-left: 5px solid #0050b3;    
-            margin-top: 0;    
-        }    
-    </style>    
-</head>    
-<body>    
-    <div class="identitas">    
-        <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>    
-        <p><strong>NIM:</strong> 251410004</p>    
-        <p><strong>Kelas:</strong> SI2A</p>    
-    </div>  <h1>Object Oriented Programming (OOP)</h1>    
-<p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek sebagai unit utama. Setiap objek memiliki state (data) dan behavior (perilaku). Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dalam sistem yang kompleks.</p>    <!-- Bagian Class & Object (Car) -->    <h2>1. Class dan Object </h2>    
-<p>Contoh pendefinisian class Car dengan dua attribute (model dan color) serta dua method (start dan stop).</p>    <div class="dart-section">    
-    <h3>Contoh Kode 1: Class Car dengan Metode Start & Stop</h3>    
-    <h4>Metode start() berfungsi untuk menyalakan mobil, sedangkan metode stop() berfungsi untuk menghentikan mobil. Dengan adanya metode tersebut, objek yang dibuat dari class Car dapat menjalankan perintah untuk mulai berjalan dan berhenti sesuai fungsi yang telah ditentukan.</h4>    
-    <pre>  class Car {
-String? model;
-String? color;
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Yoza Ulpia Rafila</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+            background-color: #e6f7ff;
+        }
+        .identitas {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-bottom: 3px solid #1890ff;
+        }
+        h1 {
+            color: #0050b3;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #1890ff;
+            border-left: 5px solid #1890ff;
+            padding-left: 0.5rem;
+            margin-top: 2rem;
+        }
+        pre {
+            background-color: #f8fcff;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+            border-left: 4px solid #1890ff;
+            color: #333;
+            margin: 1rem 0;
+        }
+        .run-btn {
+            background-color: #1890ff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .run-btn:hover {
+            background-color: #0050b3;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 2px solid #1890ff;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+    </style>
+    <script>
+        function openDartPadPopup(url) {
+            const width = 900;
+            const height = 700;
+            const left = (window.screen.width - width) / 2;
+            const top = (window.screen.height - height) / 2;
+            window.open(
+                url,
+                'DartPadKode',
+                `width=${width}, height=${height}, left=${left}, top=${top}, resizable=yes, scrollbars=yes, toolbar=no, menubar=no, location=no, status=yes`
+            );
+        }
+    </script>
+</head>
+<body>
+    <div class="identitas">
+        <p>Yoza Ulpia Rafila | 251410004 | Kelas: SI2A</p>
+    </div>
 
-void start() {
-print('Car started!');
-}
+    <h1>Object Oriented Programming (OOP)</h1>
 
-void stop() {
-print('Car stopped!');
-}
-}
 
-void main() {
-Car myCar = Car();
-myCar.model = "Sedan";
-myCar.color = "Merah";
+    <h2>01. Pengertian OOP</h2>
+    <p>Object Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek sebagai unit utama. Setiap objek memiliki state (data) dan behavior (perilaku). Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dalam sistem yang kompleks.</p>
 
-myCar.start();
-myCar.stop();
-}
-</pre>
 
-<h4>Hasil Program di DartPad</h4>  <iframe src="https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a"></iframe>    
-    </div>  <div class="dart-section">    
-    <h3>Contoh Kode 2: Class Car dengan Menampilkan Properti</h3>    
-    <h4>Class ini juga memiliki metode untuk menampilkan properti, yaitu menampilkan nilai dari brand dan model mobil. Dengan begitu, objek yang dibuat dari class Car bisa menunjukkan informasi mobilnya secara jelas.</h4>    
- <pre>class Car {  String model;
-String color;
+    <h2>02. Konsep Dasar</h2>
+    <p>Class : Blueprint atau cetakan untuk membuat objek.<br>
+    Object : Instance nyata yang tercipta dari sebuah class.<br>
+    Attribute : Representasi data melalui variabel di dalam class.<br>
+    Method : Logika fungsional atau fungsi di dalam class.</p>
 
-Car(this.model, this.color);
 
-void start() {
-print('Engine Online: $model');
-}
+    <h2>03. Class Sederhana (Car)</h2>
+    <p>Class adalah blueprint untuk membuat objek. Pada contoh ini, class Car memiliki atribut model dan color serta method start() dan stop().</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama        : Yoza Ulpia Rafila
+// Nim         : 251410004
+// Kelas       : SI2A
+
+class Car {
+  String? model;
+  String? color;
+
+  void start() {
+    print('Car started!');
+  }
+
+  void stop() {
+    print('Car stopped!');
+  }
 }
 
 void main() {
-Car myCar = Car("Sedan", "Merah");
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
 
-myCar.start();
-print(myCar.color);
+  myCar.start();
+  myCar.stop();
 }
-</pre>
+    </pre>
+    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a')">Run Program</button>
+    <p><strong>Hasil Program di DartPad</strong></p>
+    <iframe src="https://dartpad.dev/5f9379c13f5ef2d2ab217ebb4463450a"></iframe>
 
-<h4>Hasil Program di DartPad</h4>  <iframe src="https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8"></iframe>    
-    </div>  <!-- Bagian Contoh Lainnya -->     <h2>2. Contoh Kelas Lain dalam OOP</h2>    
-<h3>Pada bagian ini ditampilkan beberapa contoh class dalam konsep Object Oriented Programming (OOP). Contoh ini menunjukkan bagaimana class dan object digunakan dalam program untuk menyimpan data dan menjalankan method dalam program.</h3>    
-    <div class="dart-section">    
-        <h3>Contoh Kode 1: Class Mahasiswa</h3>    
-        <h4>Class ini memiliki konstruktor sederhana yang digunakan untuk menginisialisasi nilai properti saat objek dibuat. Dengan konstruktor ini, setiap objek Mahasiswa akan langsung memiliki data nama, NIM, dan IPK.</h4>    
-        <pre>    
-class Mahasiswa {    
-  String nama;    
-  String nim;    
-  double ipk;  Mahasiswa(this.nama, this.nim, this.ipk);  void tampilkanData() {
-print('Nama : $nama');
-print('NIM : $nim');
-print('IPK : $ipk');
-}
-}
 
-void main() {
-Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.85);
-mhs1.tampilkanData();
-}
-</pre>
+    <h2>04. Menampilkan Properti Objek (Car)</h2>
+    <p>Proses membuat objek dari class Car dan menampilkan nilai atribut model dan color ke konsol.</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama        : Yoza Ulpia Rafila
+// Nim         : 251410004
+// Kelas       : SI2A
 
-<h4>Hasil Program di DartPad</h4>  <iframe src="https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83"></iframe>    
-    </div>  <div class="dart-section">    
-    <h3>Contoh Kode 2: Class Person dengan Properti Tersembunyi</h3>    
-    <h4>Properti tersembunyi ini biasanya diakses melalui metode getter dan setter, sehingga data tetap aman tetapi bisa dibaca atau diubah dengan cara yang terkontrol. Dengan begitu, setiap objek Person menyimpan informasi pribadi dengan lebih aman.</h4>    
-    <pre>  class Person {
-String _name;
-int age;
-
-Person(this._name, this.age);
-
-void setName(String name) => _name = name;
-
-String getName() => _name;
+class Car {
+  String? model;
+  String? color;
 }
 
 void main() {
-Person person = Person("Yoza Ulpia Rafila", 19);
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
 
-print(person.age);
-person.setName("Yoza Ulpia Rafila");
-print(person.getName());
+  print(myCar.model);
+  print(myCar.color);
 }
-</pre>
+    </pre>
+    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8')">Run Program</button>
+    <p><strong>Hasil Program di DartPad</strong></p>
+    <iframe src="https://dartpad.dev/48053abb362d5dbfd83fd49019b08cf8"></iframe>
 
-<h4>Hasil Program di DartPad</h4>  <iframe src="https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9"></iframe>    
-    </div>  <div class="dart-section">    
-    <h3>Contoh Kode 3: Class Product </h3>    
-    <h4>Class Product memiliki konstruktor sederhana yang digunakan untuk memberikan nilai nama produk saat objek dibuat.</h4>    
-    <pre>  class Product {
-String nama;
 
-Product(this.nama);
+    <h2>05. Constructor (Mahasiswa)</h2>
+    <p>Constructor memudahkan mengisi nilai atribut langsung saat objek diciptakan. Contoh implementasi pada class Mahasiswa untuk mengelola data akademik.</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama        : Yoza Ulpia Rafila
+// Nim         : 251410004
+// Kelas       : SI2A
+
+class Mahasiswa {
+  String nama;
+  String nim;
+  double ipk;
+
+  Mahasiswa(this.nama, this.nim, this.ipk);
+
+  void tampilkanData() {
+    print('Nama : $nama');
+    print('NIM : $nim');
+    print('IPK : $ipk');
+  }
 }
 
 void main() {
-Product produk1 = Product("Laptop Gaming");
-print(produk1.nama);
+  Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.85);
+  mhs1.tampilkanData();
 }
-</pre>
+    </pre>
+    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83')">Run Program</button>
+    <p><strong>Hasil Program di DartPad</strong></p>
+    <iframe src="https://dartpad.dev/91095e213f7eb28d8dd7454540d37f83"></iframe>
 
-<h4>Hasil Program di DartPad</h4>  <iframe src="https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7"></iframe>    
-    </div>  <div class="dart-section">    
-    <h3>Contoh Kode 4: Class Produk dengan parameter Bernama</h3>  <h4>Class Produk menggunakan konstruktor dengan parameter bernama (named parameter). Dengan cara ini, nilai properti seperti id, nama, harga, stok, dan kategori dapat diberikan saat objek dibuat.</h4>    
-        <pre>    
-class Produk {    
-  final String id, nama;    
-  final double harga;    
-  final int stok;    
-  final String kategori;  Produk({  
-required this.id,  
-required this.nama,  
-required this.harga,  
-this.stok = 0,  
-this.kategori = "Umum",  
-});  
-}  void main() {
-Produk laptop = Produk(
-id: "P001",
-nama: "Laptop Gaming",
-harga: 15000000,
-stok: 15,
-kategori: "Elektronik",
-);
 
-Produk smartphone = Produk(
-id: "P002",
-nama: "Smartphone Flagship",
-harga: 12000000,
-stok: 25,
-);
+    <h2>06. Encapsulation (Person)</h2>
+    <p>Teknik keamanan data dengan menyembunyikan akses langsung ke variabel menggunakan prefix underscore, diakses melalui metode getter dan setter.</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama        : Yoza Ulpia Rafila
+// Nim         : 251410004
+// Kelas       : SI2A
 
-Produk kamera = Produk(
-id: "P003",
-nama: "Kamera Mirrorless",
-harga: 20000000,
-);
+class Person {
+  String _name;
+  int age;
 
-print(laptop.nama);
-print(smartphone.nama);
-print(kamera.nama);
+  Person(this._name, this.age);
+
+  void setName(String name) => _name = name;
+  String getName() => _name;
 }
-</pre>
 
-<h4>Hasil Program di DartPad</h4>  <iframe src="https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b"></iframe>    
-    </div>  <!-- Bagian Kesimpulan -->    
-<div class="kesimpulan">    
-    <h2>Kesimpulan</h2>    
-    <p>Dari berbagai contoh kode yang telah ditampilkan, dapat disimpulkan bahwa Object Oriented Programming (OOP) memudahkan pengelolaan kode dengan mengelompokkan data dan perilaku ke dalam kelas. Setiap kelas dapat memiliki atribut untuk menyimpan data dan method untuk menjalankan aksi.</p>    
-    <p>Konsep seperti konstruktor (posisional dan bernama) membantu dalam membuat objek dengan cara yang lebih fleksibel, sedangkan properti tersembunyi membantu dalam melindungi data agar tidak diakses secara sembarangan. Dengan menerapkan OOP, kode yang dibuat akan menjadi lebih terstruktur, mudah diperbaiki, dan dapat digunakan kembali untuk kebutuhan yang berbeda.</p>    
-</div>  </body>    
+void main() {
+  Person person = Person("Yoza Ulpia Rafila", 19);
+
+  print(person.age);
+  person.setName("Yoza Ulpia Rafila");
+  print(person.getName());
+}
+    </pre>
+    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9')">Run Program</button>
+    <p><strong>Hasil Program di DartPad</strong></p>
+    <iframe src="https://dartpad.dev/de08d36d4a329017d6eca0cb546526f9"></iframe>
+
+
+    <h2>07. This Keyword (Product)</h2>
+    <p>Penggunaan konstruktor sederhana dengan this keyword untuk menginisialisasi nama produk saat objek dibuat.</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama        : Yoza Ulpia Rafila
+// Nim         : 251410004
+// Kelas       : SI2A
+
+class Product {
+  String nama;
+  Product(this.nama);
+}
+
+void main() {
+  Product produk1 = Product("Laptop Gaming");
+  print(produk1.nama);
+}
+    </pre>
+    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7')">Run Program</button>
+    <p><strong>Hasil Program di DartPad</strong></p>
+    <iframe src="https://dartpad.dev/2147e40c2b4fbd8d7d6e58f5bceb66c7"></iframe>
+
+
+    <h2>08. Named Parameters (Produk)</h2>
+    <p>Penggunaan named parameters dan required untuk membuat objek yang lebih deskriptif, dengan nilai default pada beberapa atribut.</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama        : Yoza Ulpia Rafila
+// Nim         : 251410004
+// Kelas       : SI2A
+
+// Membuat class Produk
+// Class adalah blueprint atau rancangan untuk membuat objek produk
+class Produk {
+  // Deklarasi atribut / properti
+  // final artinya nilainya tidak bisa diubah setelah objek dibuat
+  final String id, nama;
+  final double harga;
+  final int stok;
+  final String kategori;
+
+  // Constructor dengan named parameter
+  // required artinya wajib diisi saat membuat objek
+  // stok dan kategori memiliki nilai default
+  Produk({
+    required this.id,
+    required this.nama,
+    required this.harga,
+    this.stok = 0,
+    this.kategori = 'Umum',
+  });
+}
+
+void main() {
+  // Membuat objek pertama bernama laptop
+  // Semua atribut diisi lengkap
+  Produk laptop = Produk(
+    id: "P001",
+    nama: "Laptop Gaming",
+    harga: 15000000,
+    stok: 15,
+    kategori: "Elektronik",
+  );
+
+  // Membuat objek kedua bernama smartphone
+  // kategori tidak diisi → otomatis bernilai "Umum"
+  Produk smartphone = Produk(
+    id: "P002",
+    nama: "Smartphone Flagship",
+    harga: 12000000,
+    stok: 25,
+  );
+
+  // Membuat objek ketiga bernama kamera
+  // stok dan kategori tidak diisi
+  // stok otomatis = 0
+  // kategori otomatis = "Umum"
+  Produk kamera = Produk(
+    id: "P003",
+    nama: "Kamera Mirrorless",
+    harga: 20000000,
+  );
+
+  // Menampilkan nama masing-masing objek ke console
+  print(laptop.nama); // Output: Laptop Gaming
+  print(smartphone.nama); // Output: Smartphone Flagship
+  print(kamera.nama); // Output: Kamera Mirrorless
+}
+    </pre>
+    <button class="run-btn" onclick="openDartPadPopup('https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b')">Run Program</button>
+    <p><strong>Hasil Program di DartPad</strong></p>
+    <iframe src="https://dartpad.dev/0b840adb6d68e0dd4ae6458f6cb4dc5b"></iframe>
+
+
+    <h2>09. Kesimpulan</h2>
+    <p>Dari berbagai contoh kode yang telah ditampilkan, dapat disimpulkan bahwa Object Oriented Programming (OOP) memudahkan pengelolaan kode dengan mengelompokkan data dan perilaku ke dalam kelas. Setiap kelas dapat memiliki atribut untuk menyimpan data dan method untuk menjalankan aksi.</p>
+    <p>Konsep seperti konstruktor (posisional dan bernama) membantu dalam membuat objek dengan cara yang lebih fleksibel, sedangkan properti tersembunyi membantu dalam melindungi data agar tidak diakses secara sembarangan. Dengan menerapkan OOP, kode yang dibuat akan menjadi lebih terstruktur, mudah diperbaiki, dan dapat digunakan kembali untuk kebutuhan yang berbeda.</p>
+
+</body>
 </html>
