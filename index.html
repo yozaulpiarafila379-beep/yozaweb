@@ -323,5 +323,51 @@ void main() {
     <p>Dari berbagai contoh kode yang telah ditampilkan, dapat disimpulkan bahwa Object Oriented Programming (OOP) memudahkan pengelolaan kode dengan mengelompokkan data dan perilaku ke dalam kelas. Setiap kelas dapat memiliki atribut untuk menyimpan data dan method untuk menjalankan aksi.</p>
     <p>Konsep seperti konstruktor (posisional dan bernama) membantu dalam membuat objek dengan cara yang lebih fleksibel, sedangkan properti tersembunyi membantu dalam melindungi data agar tidak diakses secara sembarangan. Dengan menerapkan OOP, kode yang dibuat akan menjadi lebih terstruktur, mudah diperbaiki, dan dapat digunakan kembali untuk kebutuhan yang berbeda.</p>
 
+
+    <h2>10. Quiz Bonus Kambing Class</h2>
+    <p>Class adalah blueprint untuk membuat objek. Pada contoh ini, class Hewan memiliki atribut nama dan method bersuara(), sedangkan class QuizBonusKambing memiliki atribut jenisKambing dan method tampilkanJenis() untuk keperluan quiz bonus.</p>
+    <p><strong>DART SOURCE CODE</strong></p>
+    <pre>
+// Nama : Yoza Ulpia Rafila
+// Nim        : 251410004
+// Kelas : SI2A
+
+class Hewan{
+  String nama;
+
+  Hewan(this.nama);
+
+  void bersuara() {
+    print('$nama sedang bersuara...');
+    print('Suara: Mbeeek...');
+  }
+}
+
+// Kelas Quiz Bonus Kambing
+class QuizBonusKambing {
+  // Contoh properti dan metode bisa ditambahkan sesuai kebutuhan
+  String jenisKambing;
+  
+  QuizBonusKambing(this.jenisKambing);
+  
+  void tampilkanJenis() {
+    print('Jenis kambing untuk quiz bonus: $jenisKambing');
+  }
+}
+
+void main() {
+  var myPet = Hewan('Kambing');
+  print('Nama Hewan: ${myPet.nama}');
+  myPet.bersuara();
+  
+  // Contoh penggunaan kelas QuizBonusKambing
+  var quizKambing = QuizBonusKambing('Etawa');
+  quizKambing.tampilkanJenis();
+}
+    </pre>
+    <button class="run-btn" onclick="showDartPad('iframe7', 'label7')">Run Program</button>
+    <p id="label7" class="iframe-label">Hasil Program di DartPad</p>
+    <iframe id="iframe7" class="dart-iframe" src="https://dartpad.dev/301bc98fcdbf8c32905d063ab8586e9f"></iframe>
+
 </body>
 </html>
